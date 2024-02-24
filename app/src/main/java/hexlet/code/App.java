@@ -1,8 +1,10 @@
 package hexlet.code;
 
-import static hexlet.code.Even.even;
-
 import java.util.Scanner;
+
+import static hexlet.code.Cli.greet;
+import static hexlet.code.game.Even.startEven;
+
 
 public class App {
     public static void main(String[] args) {
@@ -12,19 +14,17 @@ public class App {
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
         System.out.println("0 - Exit");
-        int choice = scanner.nextInt();
+        String choice = scanner.nextLine();
         System.out.println("Your choice: " + choice);
-
-        if (choice == 1){
-            even();
+        gameSelection(choice);
+    }
+    public static void gameSelection(String choice){
+        switch (choice) {
+            case "1" -> greet();
+            case "2" -> startEven();
+            default -> {
+            }
 
         }
-        if (choice == 2){
-            even();
-        }
-
-
-        scanner.close();
-
     }
 }
