@@ -1,7 +1,9 @@
 package hexlet.code.game;
 
 
-import static hexlet.code.Engine.*;
+import static hexlet.code.Engine.NUMBEROFQUESTIONS;
+import static hexlet.code.Engine.MAX;
+import static hexlet.code.Engine.startEngine;
 import static hexlet.code.RandomNumber.random;
 
 public class Even {
