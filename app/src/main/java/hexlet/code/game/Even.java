@@ -8,7 +8,8 @@ public class Even {
 
     public static void startEven() {
         String question = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        String[][] questionAndAnswers = new String[3][2];
+        var numberOfQuestions = 3;
+        String[][] questionAndAnswers = new String[numberOfQuestions][2];
         for (var questionAnswer : questionAndAnswers) {
             var randomNumber = random(1, 100);
             questionAnswer[0] = Integer.toString(randomNumber);

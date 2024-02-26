@@ -4,9 +4,10 @@ import static hexlet.code.Engine.startEngine;
 import static hexlet.code.RandomNumber.random;
 
 public class Calc {
-    public static void startCalc(){
+    public static void startCalc() {
         String question = "What is the result of the expression?";
-        String[][] questionAndAnswers = new String[3][2];
+        var numberOfQuestions = 3;
+        String[][] questionAndAnswers = new String[numberOfQuestions][2];
         for (var questionAnswer : questionAndAnswers) {
             var randomNumberX = random(1, 100);
             var randomNumberY = random(1, 100);
@@ -17,15 +18,15 @@ public class Calc {
         }
         startEngine(questionAndAnswers, question);
     }
-    public static String[] randomCalc(int x, int y, int randomNumber){
-        if(randomNumber == 1){
+    public static String[] randomCalc(int x, int y, int randomNumber) {
+        if (randomNumber == 1) {
             return new String[]{"+", Integer.toString(x + y)};
         }
-        if(randomNumber == 2){
+        if (randomNumber == 2) {
             return new String[]{"-", Integer.toString(x - y)};
         }
-        if(randomNumber == 3){
-            return new String[]{"*", Integer.toString(x * y)};
+        if (randomNumber == 3) {
+            return new String[] {"*", Integer.toString(x * y)};
         }
         return new String[0];
     }

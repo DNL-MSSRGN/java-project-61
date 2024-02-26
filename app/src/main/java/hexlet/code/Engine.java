@@ -14,17 +14,17 @@ public class Engine {
         System.out.println("Hello, " + userName + "!");
         System.out.println(question);
         for (var questionAnswer : questionAndAnswers) {
-               System.out.println("Question: " + questionAnswer[0]);
-               String answer = scanner.next();
-               System.out.println("Your answer: " + answer);
-               if (answer.equals(questionAnswer[1])){
-                    System.out.println("Correct!");
-               }  else {
-                   System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
-                           + questionAnswer[1] +"'.");
-                   System.out.println("Let's try again, " + userName + "!");
-                   return;
-               }
+            System.out.println("Question: " + questionAnswer[0]);
+            String answer = scanner.next();
+            System.out.println("Your answer: " + answer);
+            if (answer.equals(questionAnswer[1])) {
+                System.out.println("Correct!");
+            } else {
+                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
+                        + questionAnswer[1] + "'.");
+                System.out.println("Let's try again, " + userName + "!");
+                return;
+            }
         }
         System.out.println("Congratulations, " + userName + "!");
     }

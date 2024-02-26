@@ -4,9 +4,10 @@ import static hexlet.code.Engine.startEngine;
 import static hexlet.code.RandomNumber.random;
 
 public class Progression {
-    public static void startProgression(){
+    public static void startProgression() {
         String question = "What number is missing in the progression?";
-        String[][] questionAndAnswers = new String[3][2];
+        var numberOfQuestions = 3;
+        String[][] questionAndAnswers = new String[numberOfQuestions][2];
         for (var questionAnswer : questionAndAnswers) {
             var interval = random(1, 10);
             var length = random(5, 10);
@@ -22,9 +23,9 @@ public class Progression {
         }
         startEngine(questionAndAnswers, question);
     }
-    public static String[] generateProgression(int interval, int length, int number){
+    public static String[] generateProgression(int interval, int length, int number) {
         String[] progression = new String[length];
-        for (var i = 0; i < length; i++){
+        for (var i = 0; i < length; i++) {
             progression[i] = Integer.toString(number + i * interval);
         }
         return progression;
