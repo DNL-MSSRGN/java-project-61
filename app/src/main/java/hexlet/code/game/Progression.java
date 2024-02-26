@@ -1,22 +1,24 @@
 package hexlet.code.game;
 
-import static hexlet.code.Engine.startEngine;
+import static hexlet.code.Engine.*;
 import static hexlet.code.RandomNumber.random;
 
 public class Progression {
+
+    static final int intervalMin = 3;
+    static final int intervalMax = 10;
+
+    static final int lengthMin = 5;
+    static final int lengthMax = 10;
+
     public static void startProgression() {
         String question = "What number is missing in the progression?";
         var numberOfQuestions = 3;
-        String[][] questionAndAnswers = new String[numberOfQuestions][2];
+        String[][] questionAndAnswers = new String[NUMBEROFQUESTIONS][2];
         for (var questionAnswer : questionAndAnswers) {
-            int intervalMin = 2;
-            int intervalMax = 10;
             var interval = random(intervalMin, intervalMax);
-            int lengthMin = 5;
-            int lengthMax = 10;
             var length = random(lengthMin, lengthMax);
-            int max = 100;
-            var randomNumber = random(1, max);
+            var randomNumber = random(1, MAX);
             var hollow = random(1, length);
 
             String[] progression = generateProgression(interval, length, randomNumber);

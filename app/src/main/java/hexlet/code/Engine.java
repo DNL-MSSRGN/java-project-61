@@ -5,7 +5,8 @@ import java.util.Scanner;
 import static java.lang.System.in;
 
 public class Engine {
-    public static int numberOfQuestions = 3;
+    public static final int NUMBEROFQUESTIONS = 3;
+    public static final int MAX = 100;
     public static void startEngine(String[][] questionAndAnswers, String question) {
         Scanner scanner = new Scanner(in);
 
