@@ -6,6 +6,7 @@ import static hexlet.code.Cli.greet;
 import static hexlet.code.game.Calc.startCalc;
 import static hexlet.code.game.Even.startEven;
 import static hexlet.code.game.GCD.startGCD;
+import static hexlet.code.game.Prime.startPrime;
 import static hexlet.code.game.Progression.startProgression;
 
 
@@ -19,6 +20,7 @@ public class App {
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
         System.out.println("5 - Progression");
+        System.out.println("6 - Prime");
         System.out.println("0 - Exit");
         String choice = scanner.nextLine();
         System.out.println("Your choice: " + choice);
@@ -31,6 +33,7 @@ public class App {
             case "3" -> startCalc();
             case "4" -> startGCD();
             case "5" -> startProgression();
+            case "6" -> startPrime();
             default -> {
             }
 
