@@ -8,8 +8,8 @@ public class Calc {
         String question = "What is the result of the expression?";
         String[][] questionAndAnswers = new String[3][2];
         for (var questionAnswer : questionAndAnswers) {
-            var randomNumberX = random();
-            var randomNumberY = random();
+            var randomNumberX = random(1, 100);
+            var randomNumberY = random(1, 100);
             var randomNumber = (int) (Math.random() * 10) / 3;
             String[] calc = randomCalc(randomNumberX,  randomNumberY,  randomNumber);
             questionAnswer[0] = Integer.toString(randomNumberX) + " " + calc[0] + " " + Integer.toString(randomNumberY);

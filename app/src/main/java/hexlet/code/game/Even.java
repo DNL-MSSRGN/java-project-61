@@ -10,7 +10,7 @@ public class Even {
         String question = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         String[][] questionAndAnswers = new String[3][2];
         for (var questionAnswer : questionAndAnswers) {
-            var randomNumber = random();
+            var randomNumber = random(1, 100);
             questionAnswer[0] = Integer.toString(randomNumber);
 
             questionAnswer[1] = randomNumber % 2 == 0 ? "yes" : "no";
