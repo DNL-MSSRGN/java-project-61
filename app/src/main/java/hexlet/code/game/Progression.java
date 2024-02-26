@@ -5,19 +5,18 @@ import static hexlet.code.RandomNumber.random;
 
 public class Progression {
 
-    static final int intervalMin = 3;
-    static final int intervalMax = 10;
+    static final int INTERVALMIN = 3;
+    static final int INTERVALMAX = 10;
 
-    static final int lengthMin = 5;
-    static final int lengthMax = 10;
+    static final int LENGTHMIN = 5;
+    static final int LENGTHMAX = 10;
 
     public static void startProgression() {
         String question = "What number is missing in the progression?";
-        var numberOfQuestions = 3;
         String[][] questionAndAnswers = new String[NUMBEROFQUESTIONS][2];
         for (var questionAnswer : questionAndAnswers) {
-            var interval = random(intervalMin, intervalMax);
-            var length = random(lengthMin, lengthMax);
+            var interval = random(INTERVALMIN, INTERVALMAX);
+            var length = random(LENGTHMIN, LENGTHMAX);
             var randomNumber = random(1, MAX);
             var hollow = random(1, length);
 

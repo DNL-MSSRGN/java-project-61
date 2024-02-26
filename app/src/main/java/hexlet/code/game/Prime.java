@@ -26,7 +26,7 @@ public class Prime {
         return checkingPrime(x);
     }
     public static String checkingPrime(int x) {
-        int divider = 3;
+        final int divider = 3;
         for (var i = divider; i * i <= x; i += 2) {
             if (x % i == 0) {
                 return "no";

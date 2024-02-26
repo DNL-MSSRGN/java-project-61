@@ -24,7 +24,7 @@ public class Calc {
         if (randomNumber == 2) {
             return new String[]{"-", Integer.toString(x - y)};
         }
-        if (randomNumber == 3) {
+        if (randomNumber == NUMBEROFQUESTIONS) {
             return new String[] {"*", Integer.toString(x * y)};
         }
         return new String[0];

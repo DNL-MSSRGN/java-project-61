@@ -6,7 +6,6 @@ import static hexlet.code.RandomNumber.random;
 public class GCD {
     public static void startGCD() {
         String question = "Find the greatest common divisor of given numbers.";
-        var numberOfQuestions = 3;
         String[][] questionAndAnswers = new String[NUMBEROFQUESTIONS][2];
         for (var questionAnswer : questionAndAnswers) {
             var randomNumberX = random(1, MAX);
