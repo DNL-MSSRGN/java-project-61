@@ -10,7 +10,7 @@ public class Calc {
         for (var questionAnswer : questionAndAnswers) {
             var randomNumberX = random(1, 100);
             var randomNumberY = random(1, 100);
-            var randomNumber = (int) (Math.random() * 10) / 3;
+            var randomNumber = random(1, 3);
             String[] calc = randomCalc(randomNumberX,  randomNumberY,  randomNumber);
             questionAnswer[0] = Integer.toString(randomNumberX) + " " + calc[0] + " " + Integer.toString(randomNumberY);
             questionAnswer[1] = calc[1];
@@ -18,13 +18,13 @@ public class Calc {
         startEngine(questionAndAnswers, question);
     }
     public static String[] randomCalc(int x, int y, int randomNumber){
-        if(randomNumber == 0){
+        if(randomNumber == 1){
             return new String[]{"+", Integer.toString(x + y)};
         }
-        if(randomNumber == 1){
+        if(randomNumber == 2){
             return new String[]{"-", Integer.toString(x - y)};
         }
-        if(randomNumber == 2){
+        if(randomNumber == 3){
             return new String[]{"*", Integer.toString(x * y)};
         }
         return new String[0];
