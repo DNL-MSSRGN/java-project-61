@@ -9,9 +9,14 @@ public class Progression {
         var numberOfQuestions = 3;
         String[][] questionAndAnswers = new String[numberOfQuestions][2];
         for (var questionAnswer : questionAndAnswers) {
-            var interval = random(1, 10);
-            var length = random(5, 10);
-            var randomNumber = random(1, 100);
+            int intervalMin = 2;
+            int intervalMax = 10;
+            var interval = random(intervalMin, intervalMax);
+            int lengthMin = 5;
+            int lengthMax = 10;
+            var length = random(lengthMin, lengthMax);
+            int max = 100;
+            var randomNumber = random(1, max);
             var hollow = random(1, length);
 
             String[] progression = generateProgression(interval, length, randomNumber);

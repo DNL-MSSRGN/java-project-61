@@ -9,8 +9,9 @@ public class GCD {
         var numberOfQuestions = 3;
         String[][] questionAndAnswers = new String[numberOfQuestions][2];
         for (var questionAnswer : questionAndAnswers) {
-            var randomNumberX = random(1, 100);
-            var randomNumberY = random(1, 100);
+            int max = 100;
+            var randomNumberX = random(1, max);
+            var randomNumberY = random(1, max);
             questionAnswer[0] = Integer.toString(randomNumberX) +  " " + Integer.toString(randomNumberY);
 
             questionAnswer[1] = Integer.toString(gcd(randomNumberX, randomNumberY));

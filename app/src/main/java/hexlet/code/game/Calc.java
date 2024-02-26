@@ -1,17 +1,18 @@
 package hexlet.code.game;
 
+import static hexlet.code.Engine.numberOfQuestions;
 import static hexlet.code.Engine.startEngine;
 import static hexlet.code.RandomNumber.random;
 
 public class Calc {
     public static void startCalc() {
         String question = "What is the result of the expression?";
-        var numberOfQuestions = 3;
         String[][] questionAndAnswers = new String[numberOfQuestions][2];
         for (var questionAnswer : questionAndAnswers) {
-            var randomNumberX = random(1, 100);
-            var randomNumberY = random(1, 100);
-            var randomNumber = random(1, 3);
+            int max = 100;
+            var randomNumberX = random(1, max);
+            var randomNumberY = random(1, max);
+            var randomNumber = random(1, numberOfQuestions);
             String[] calc = randomCalc(randomNumberX,  randomNumberY,  randomNumber);
             questionAnswer[0] = Integer.toString(randomNumberX) + " " + calc[0] + " " + Integer.toString(randomNumberY);
             questionAnswer[1] = calc[1];
