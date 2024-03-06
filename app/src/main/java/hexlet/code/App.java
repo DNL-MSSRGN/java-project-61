@@ -35,6 +35,7 @@ public class App {
             case "5" -> startProgression();
             case "6" -> startPrime();
             default -> {
+                System.out.println("Вы ввели некорректные данные!");
             }
 
         }
