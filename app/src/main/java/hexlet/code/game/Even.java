@@ -5,19 +5,22 @@ import static hexlet.code.Engine.NUMBEROFQUESTIONS;
 import static hexlet.code.Engine.MAX;
 import static hexlet.code.Engine.startEngine;
 import static hexlet.code.RandomNumber.random;
+import static hexlet.code.YesOrNo.yesOrNo;
 
 public class Even {
-
-    public static void startEven() {
-        String question = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+    static final String QUESTION = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+    public static String[][] even() {
         String[][] questionAndAnswers = new String[NUMBEROFQUESTIONS][2];
         for (var questionAnswer : questionAndAnswers) {
             var randomNumber = random(1, MAX);
             questionAnswer[0] = Integer.toString(randomNumber);
 
-            questionAnswer[1] = randomNumber % 2 == 0 ? "yes" : "no";
+            questionAnswer[1] = yesOrNo(randomNumber % 2 == 0);
         }
-        startEngine(questionAndAnswers, question);
+        return questionAndAnswers;
 
+    }
+    public static void startEven() {
+        startEngine(even(), QUESTION);
     }
 }

@@ -3,10 +3,15 @@ package hexlet.code;
 import java.util.Scanner;
 
 import static hexlet.code.Cli.greet;
+
 import static hexlet.code.game.Calc.startCalc;
+
 import static hexlet.code.game.Even.startEven;
+
 import static hexlet.code.game.GCD.startGCD;
+
 import static hexlet.code.game.Prime.startPrime;
+
 import static hexlet.code.game.Progression.startProgression;
 
 
