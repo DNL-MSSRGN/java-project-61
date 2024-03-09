@@ -17,28 +17,28 @@ public class Prime {
             var randomNumber = random(1, MAX);
             questionAnswer[0] = Integer.toString(randomNumber);
 
-            questionAnswer[1] = checking(randomNumber);
+            questionAnswer[1] = yesOrNo(checking(randomNumber));
         }
         return questionAndAnswers;
 
     }
-    public static String checking(int x) {
+    public static boolean checking(int x) {
         if (x == 2) {
-            return yesOrNo(true);
+            return true;
         }
         if (x % 2 == 0 || x < 2) {
-            return yesOrNo(false);
+            return false;
         }
         return checkingPrime(x);
     }
-    public static String checkingPrime(int x) {
+    public static boolean checkingPrime(int x) {
         final int divider = 3;
         for (var i = divider; i * i <= x; i += 2) {
             if (x % i == 0) {
-                return yesOrNo(false);
+                return false;
             }
         }
-        return yesOrNo(true);
+        return true;
     }
     public static void startPrime() {
         startEngine(prime(), QUESTION);
