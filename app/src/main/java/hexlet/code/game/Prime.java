@@ -5,8 +5,9 @@ import static hexlet.code.Engine.MAX;
 
 import static hexlet.code.Engine.startEngine;
 
-import static hexlet.code.RandomNumber.random;
-import static hexlet.code.YesOrNo.yesOrNo;
+import static hexlet.code.Utils.random;
+
+import static hexlet.code.game.Even.yesOrNo;
 
 public class Prime {
     static final String QUESTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";

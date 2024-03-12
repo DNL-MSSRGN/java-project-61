@@ -5,7 +5,7 @@ import static hexlet.code.Engine.MAX;
 
 import static hexlet.code.Engine.startEngine;
 
-import static hexlet.code.RandomNumber.random;
+import static hexlet.code.Utils.random;
 
 public class Calc {
     private static final String QUESTION = "What is the result of the expression?";
@@ -25,18 +25,18 @@ public class Calc {
         return questionAndAnswers;
     }
     public static String[] randomCalc(int x, int y, int randomNumber) {
-        if (randomNumber == 1) {
-            return new String[]{"+", Integer.toString(x + y)};
+        switch (randomNumber) {
+            case 1 : return new String[]{"+", Integer.toString(x + y)};
+            case 2 : return new String[]{"-", Integer.toString(x - y)};
+            case 3 : return new String[]{"*", Integer.toString(x * y)};
+            default: {
+                System.out.println("Некорректные данные!");
+            }
         }
-        if (randomNumber == 2) {
-            return new String[]{"-", Integer.toString(x - y)};
-        }
-        if (randomNumber == NUMBEROFQUESTIONS) {
-            return new String[] {"*", Integer.toString(x * y)};
-        }
+
         return new String[0];
     }
-    public static void startCalc() {
-        startEngine(calc(), QUESTION);
-    }
+    public static void startCalc () {
+                    startEngine(calc(), QUESTION);
+                }
 }

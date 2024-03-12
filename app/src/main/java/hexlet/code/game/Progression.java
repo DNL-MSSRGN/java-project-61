@@ -5,7 +5,7 @@ import static hexlet.code.Engine.MAX;
 
 import static hexlet.code.Engine.startEngine;
 
-import static hexlet.code.RandomNumber.random;
+import static hexlet.code.Utils.random;
 
 public class Progression {
 
