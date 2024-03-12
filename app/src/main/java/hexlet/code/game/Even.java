@@ -14,7 +14,7 @@ public class Even {
             var randomNumber = random(1, MAX);
             questionAnswer[0] = Integer.toString(randomNumber);
 
-            questionAnswer[1] = yesOrNo(randomNumber % 2 == 0);
+            questionAnswer[1] = yesOrNo(checkEven(randomNumber));
         }
         return questionAndAnswers;
 
@@ -24,5 +24,8 @@ public class Even {
     }
     public static String yesOrNo(boolean trueAnswer) {
         return trueAnswer ? "yes" : "no";
+    }
+    public static boolean checkEven(int randomNumber) {
+        return randomNumber % 2 == 0;
     }
 }

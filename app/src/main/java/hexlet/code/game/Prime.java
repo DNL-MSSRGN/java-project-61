@@ -24,22 +24,20 @@ public class Prime {
 
     }
     public static boolean checking(int x) {
+        final int divider = 3;
         if (x == 2) {
             return true;
         }
         if (x % 2 == 0 || x < 2) {
             return false;
-        }
-        return checkingPrime(x);
-    }
-    public static boolean checkingPrime(int x) {
-        final int divider = 3;
-        for (var i = divider; i * i <= x; i += 2) {
-            if (x % i == 0) {
-                return false;
+        } else {
+            for (var i = divider; i * i <= x; i += 2) {
+                if (x % i == 0) {
+                    return false;
+                }
             }
+            return true;
         }
-        return true;
     }
     public static void startPrime() {
         startEngine(prime(), QUESTION);

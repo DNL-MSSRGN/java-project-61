@@ -39,8 +39,9 @@ public class App {
             case "4" -> startGCD();
             case "5" -> startProgression();
             case "6" -> startPrime();
+            case "0" ->  System.out.println("Goodbye");
             default -> {
-                System.out.println("Вы ввели некорректные данные!");
+                System.out.println("You have entered incorrect data!");
             }
 
         }
