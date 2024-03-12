@@ -32,7 +32,7 @@
 
 #### Пример игры
 
-[![asciicast](.svg)]()
+[![asciicast](https://asciinema.org/a/SxZsz823amTKMql4JnJDFRFQD.svg)](https://asciinema.org/a/SxZsz823amTKMql4JnJDFRFQD)
 
 
 ## Игра: "НОД"
@@ -42,7 +42,7 @@
 
 #### Пример игры
 
-[![asciicast](.svg)]()
+[![asciicast](https://asciinema.org/a/gdy7a9Qju4wmubYnXhRznWUgp.svg)](https://asciinema.org/a/gdy7a9Qju4wmubYnXhRznWUgp)
 
 
 ## Игра: "Арифметическая прогрессия"
@@ -52,7 +52,7 @@
 
 #### Пример игры
 
-[![asciicast](.svg)]()
+[![asciicast](https://asciinema.org/a/SasvRrY3o3tVWebVXCA7k2drF.svg)](https://asciinema.org/a/SasvRrY3o3tVWebVXCA7k2drF)
 
 
 ## Игра: "Простое ли число?"
@@ -62,4 +62,4 @@
 
 #### Пример игры
 
-[![asciicast](.svg)]()
+[![asciicast](https://asciinema.org/a/lWVAx1hSy0uYktdc2Z2J0J1vp.svg)](https://asciinema.org/a/lWVAx1hSy0uYktdc2Z2J0J1vp)
