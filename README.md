@@ -62,4 +62,4 @@
 
 #### Пример игры
 
-[![asciicast](https://asciinema.org/a/lWVAx1hSy0uYktdc2Z2J0J1vp.svg)](https://asciinema.org/a/lWVAx1hSy0uYktdc2Z2J0J1vp)
+[![asciicast](https://asciinema.org/a/zQdoKEcYJWWP5Fg3uQDnR8Vpg.svg)](https://asciinema.org/a/zQdoKEcYJWWP5Fg3uQDnR8Vpg)
