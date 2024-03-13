@@ -13,7 +13,7 @@ public class Calc {
         String[] questionAndAnswer = new String[2];
         var randomNumberX = random(1, MAX);
         var randomNumberY = random(1, MAX);
-        var randomNumber = (int) (Math.random() * 3) + 1;
+        var randomNumber = (int) (Math.random() * NUMBEROFQUESTIONS) + 1;
 
         String[] calc = randomCalc(randomNumberX,  randomNumberY,  randomNumber);
 
@@ -42,7 +42,7 @@ public class Calc {
             case 2 -> {
                 return new String[]{"-", Integer.toString(x - y)};
             }
-            case 3 -> {
+            case NUMBEROFQUESTIONS -> {
                 return new String[]{"+", Integer.toString(x + y)};
             }
             default -> {
