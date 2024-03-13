@@ -52,7 +52,7 @@ public class Calc {
 
         return new String[0];
     }
-    public static void startCalc () {
-                    startEngine(generate(), QUESTION);
-                }
+    public static void startCalc() {
+        startEngine(generate(), QUESTION);
+    }
 }
