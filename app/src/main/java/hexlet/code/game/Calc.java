@@ -6,9 +6,9 @@ import static hexlet.code.Utils.random;
 
 public class Calc {
     private static final String QUESTION = "What is the result of the expression?";
-    private static int X;
-    private static int Y;
-    private static char OPERATORS;
+    private static int RANDOMX;
+    private static int randomY;
+    private static char OPERATOR;
 
     public static String[][] generateRoundData() {
         String[][] questionAndAnswers = new String[NUMBEROFQUESTIONS][2];
@@ -16,26 +16,28 @@ public class Calc {
         for (var questionAnswer : questionAndAnswers) {
 
             questionAnswer[1] = String.valueOf(calculate());
-            questionAnswer[0] = Integer.toString(X) + " " + OPERATORS + " " + Integer.toString(Y);;
+            questionAnswer[0] = Integer.toString(RANDOMX)
+                    + " " + OPERATOR + " "
+                    + Integer.toString(randomY);
         }
         return questionAndAnswers;
     }
     public static int calculate() {
-        X = random(1, MAX);
-        Y = random(1, MAX);
+        RANDOMX = random(1, MAX);
+        randomY = random(1, MAX);
         var randomNumber = (int) (Math.random() * NUMBEROFQUESTIONS) + 1;
         switch (randomNumber) {
             case 1 -> {
-                OPERATORS = '*';
-                return X * Y;
+                OPERATOR = '*';
+                return RANDOMX * randomY;
             }
             case 2 -> {
-                OPERATORS = '-';
-                return X - Y;
+                OPERATOR = '-';
+                return RANDOMX - randomY;
             }
             case NUMBEROFQUESTIONS -> {
-                OPERATORS = '+';
-                return X + Y;
+                OPERATOR = '+';
+                return RANDOMX + randomY;
             }
             default -> {
                 throw new RuntimeException("Unknown input");
