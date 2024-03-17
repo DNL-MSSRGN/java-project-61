@@ -1,18 +1,7 @@
 package hexlet.code;
-
+import hexlet.code.game.*;
 import java.util.Scanner;
-
 import static hexlet.code.Cli.greet;
-
-import static hexlet.code.game.Calc.startCalc;
-
-import static hexlet.code.game.Even.startEven;
-
-import static hexlet.code.game.GCD.startGCD;
-
-import static hexlet.code.game.Prime.startPrime;
-
-import static hexlet.code.game.Progression.startProgression;
 
 
 public class App {
@@ -34,11 +23,11 @@ public class App {
     public static void gameSelection(String choice) {
         switch (choice) {
             case "1" -> greet();
-            case "2" -> startEven();
-            case "3" -> startCalc();
-            case "4" -> startGCD();
-            case "5" -> startProgression();
-            case "6" -> startPrime();
+            case "2" -> Even.runGame();
+            case "3" -> Calc.runGame();
+            case "4" -> GCD.runGame();
+            case "5" -> Progression.runGame();
+            case "6" -> Prime.runGame();
             case "0" ->  System.out.println("Goodbye");
             default -> {
                 System.out.println("You have entered incorrect data!");

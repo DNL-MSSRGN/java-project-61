@@ -1,29 +1,25 @@
 package hexlet.code.game;
-
 import static hexlet.code.Engine.NUMBEROFQUESTIONS;
 import static hexlet.code.Engine.MAX;
-
 import static hexlet.code.Engine.startEngine;
-
 import static hexlet.code.Utils.random;
-
 import static hexlet.code.game.Even.yesOrNo;
 
 public class Prime {
     static final String QUESTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-    public static String[][] prime() {
+    public static String[][] generateRoundData() {
         String[][] questionAndAnswers = new String[NUMBEROFQUESTIONS][2];
 
         for (var questionAnswer : questionAndAnswers) {
             var randomNumber = random(1, MAX);
             questionAnswer[0] = Integer.toString(randomNumber);
 
-            questionAnswer[1] = yesOrNo(checking(randomNumber));
+            questionAnswer[1] = yesOrNo(checkingIfNumberIsPrime(randomNumber));
         }
         return questionAndAnswers;
 
     }
-    public static boolean checking(int x) {
+    public static boolean checkingIfNumberIsPrime(int x) {
         final int divider = 3;
         if (x == 2) {
             return true;
@@ -39,7 +35,7 @@ public class Prime {
             return true;
         }
     }
-    public static void startPrime() {
-        startEngine(prime(), QUESTION);
+    public static void runGame() {
+        startEngine(generateRoundData(), QUESTION);
     }
 }

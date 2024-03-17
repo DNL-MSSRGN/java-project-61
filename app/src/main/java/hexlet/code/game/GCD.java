@@ -1,5 +1,4 @@
 package hexlet.code.game;
-
 import static hexlet.code.Engine.NUMBEROFQUESTIONS;
 import static hexlet.code.Engine.MAX;
 import static hexlet.code.Engine.startEngine;
@@ -7,7 +6,7 @@ import static hexlet.code.Utils.random;
 
 public class GCD {
     static final String QUESTION = "Find the greatest common divisor of given numbers.";
-    public static String[][] gcd() {
+    public static String[][] generateRoundData() {
 
         String[][] questionAndAnswers = new String[NUMBEROFQUESTIONS][2];
 
@@ -17,16 +16,16 @@ public class GCD {
 
             questionAnswer[0] = Integer.toString(randomNumberX) +  " " + Integer.toString(randomNumberY);
 
-            questionAnswer[1] = Integer.toString(gcd(randomNumberX, randomNumberY));
+            questionAnswer[1] = Integer.toString(checkingGCD(randomNumberX, randomNumberY));
         }
         return questionAndAnswers;
 
     }
-    public static int gcd(int a, int b) {
-        return (a % b == 0) ? Math.abs(b) : gcd(b, a % b);
+    public static int checkingGCD(int a, int b) {
+        return (a % b == 0) ? Math.abs(b) : checkingGCD(b, a % b);
     }
-    public static void startGCD() {
-        startEngine(gcd(), QUESTION);
+    public static void runGame() {
+        startEngine(generateRoundData(), QUESTION);
     }
 }
 

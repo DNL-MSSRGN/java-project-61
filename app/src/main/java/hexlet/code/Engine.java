@@ -1,5 +1,4 @@
 package hexlet.code;
-
 import java.util.Scanner;
 
 import static java.lang.System.in;
