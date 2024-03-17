@@ -1,4 +1,5 @@
 .gradle
+demo.cast
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
@@ -41,5 +42,3 @@ bin/
 
 ### Mac OS ###
 .DS_Store
-
-demo.cast
