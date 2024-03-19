@@ -1,7 +1,7 @@
 package hexlet.code.game;
-import static hexlet.code.Engine.NUMBEROFQUESTIONS;
-import static hexlet.code.Engine.MAX;
+import static hexlet.code.Engine.NUMBEROFROUNDS;
 import static hexlet.code.Engine.startEngine;
+import static hexlet.code.Utils.MAX;
 import static hexlet.code.Utils.random;
 
 public class Progression {
@@ -15,7 +15,7 @@ public class Progression {
     static final String QUESTION = "What number is missing in the progression?";
 
     public static String[][] generateRoundData() {
-        String[][] questionAndAnswers = new String[NUMBEROFQUESTIONS][2];
+        String[][] questionAndAnswers = new String[NUMBEROFROUNDS][2];
         for (var questionAnswer : questionAndAnswers) {
             var interval = random(INTERVALMIN, INTERVALMAX);
             var length = random(LENGTHMIN, LENGTHMAX);
@@ -33,6 +33,8 @@ public class Progression {
         }
         return questionAndAnswers;
     }
+
+
     public static String[] generateProgression(int interval, int length, int number) {
         String[] progression = new String[length];
         for (var i = 0; i < length; i++) {
@@ -40,6 +42,8 @@ public class Progression {
         }
         return progression;
     }
+
+
     public static void runGame() {
         startEngine(generateRoundData(), QUESTION);
     }

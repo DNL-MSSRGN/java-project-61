@@ -24,6 +24,8 @@ public class App {
         System.out.println("Your choice: " + choice);
         gameSelection(choice);
     }
+
+
     public static void gameSelection(String choice) {
         switch (choice) {
             case "1" -> greet();
