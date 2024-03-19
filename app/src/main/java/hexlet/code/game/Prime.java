@@ -14,14 +14,14 @@ public class Prime {
             var randomNumber = random(1, MAX);
             questionAnswer[0] = Integer.toString(randomNumber);
 
-            questionAnswer[1] = IsPrime(randomNumber)  ? "yes" : "no";
+            questionAnswer[1] = isPrime(randomNumber)  ? "yes" : "no";
         }
         return questionAndAnswers;
 
     }
 
 
-    public static boolean IsPrime(int x) {
+    public static boolean isPrime(int x) {
         final int divider = 3;
         if (x == 2) {
             return true;
