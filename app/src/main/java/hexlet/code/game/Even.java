@@ -11,7 +11,6 @@ public class Even {
         for (var questionAnswer : questionAndAnswers) {
             var randomNumber = random(1, MAX);
             questionAnswer[0] = Integer.toString(randomNumber);
-
             questionAnswer[1] = checkEven(randomNumber) ? "yes" : "no";
         }
         return questionAndAnswers;
@@ -26,5 +25,6 @@ public class Even {
 
     public static boolean checkEven(int randomNumber) {
         return randomNumber % 2 == 0;
+
     }
 }

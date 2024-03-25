@@ -1,5 +1,6 @@
 package hexlet.code.game;
 
+
 import static hexlet.code.Engine.NUMBEROFROUNDS;
 import static hexlet.code.Engine.startEngine;
 import static hexlet.code.Utils.MAX;
@@ -12,14 +13,12 @@ public class Calc {
 
     public static String[][] generateRoundData() {
         String[][] questionAndAnswers = new String[NUMBEROFROUNDS][2];
-
         for (var questionAnswer : questionAndAnswers) {
-
             randomX = random(1, MAX);
             randomY = random(1, MAX);
             var randomNumber = (int) (Math.random() * NUMBEROFROUNDS) + 1;
-            char operator = choosingAnOperator(randomNumber);
-
+            var array = new String[]{"0", "*", "+", "-"};
+            var operator = array[randomNumber];
             questionAnswer[1] = String.valueOf(calculate(randomX, randomY, operator));
             questionAnswer[0] = Integer.toString(randomX)
                     + " " + operator + " "
@@ -29,34 +28,16 @@ public class Calc {
     }
 
 
-    public static int calculate(int x, int y, char operator) {
+    public static int calculate(int x, int y, String operator) {
         switch (operator) {
-            case '*' -> {
+            case "*" -> {
                 return randomX * randomY;
             }
-            case '-' -> {
+            case "-" -> {
                 return randomX - randomY;
             }
-            case '+' -> {
+            case "+" -> {
                 return randomX + randomY;
-            }
-            default -> {
-                throw new RuntimeException("Unknown input");
-            }
-        }
-    }
-
-
-    public static char choosingAnOperator(int randomNumber) {
-        switch (randomNumber) {
-            case 1 -> {
-                return  '*';
-            }
-            case 2 -> {
-                return '-';
-            }
-            case NUMBEROFROUNDS -> {
-                return '+';
             }
             default -> {
                 throw new RuntimeException("Unknown input");

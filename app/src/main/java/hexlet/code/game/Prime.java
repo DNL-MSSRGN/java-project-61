@@ -9,11 +9,9 @@ public class Prime {
     static final String QUESTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     public static String[][] generateRoundData() {
         String[][] questionAndAnswers = new String[NUMBEROFROUNDS][2];
-
         for (var questionAnswer : questionAndAnswers) {
             var randomNumber = random(1, MAX);
             questionAnswer[0] = Integer.toString(randomNumber);
-
             questionAnswer[1] = isPrime(randomNumber)  ? "yes" : "no";
         }
         return questionAndAnswers;
@@ -21,23 +19,19 @@ public class Prime {
     }
 
 
-    public static boolean isPrime(int x) {
-        final int divider = 3;
-        if (x == 2) {
-            return true;
-        }
-        if (x % 2 == 0 || x < 2) {
+    private static boolean isPrime(int number) {
+        if (number < 2) {
             return false;
-        } else {
-            for (var i = divider; i * i <= x; i += 2) {
-                if (x % i == 0) {
-                    return false;
-                }
-            }
-            return true;
         }
-    }
 
+        for (int i = 2; i <= Math.sqrt(number); i += 1) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 
     public static void runGame() {
         startEngine(generateRoundData(), QUESTION);
