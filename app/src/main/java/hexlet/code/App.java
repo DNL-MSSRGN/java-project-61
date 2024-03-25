@@ -11,7 +11,6 @@ import static hexlet.code.Cli.greet;
 public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         System.out.println("Plea1se enter the game number and press Enter.");
         System.out.println("1 - Greet");
         System.out.println("2 - Even");

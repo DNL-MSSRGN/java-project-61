@@ -20,13 +20,10 @@ public class Progression {
             var interval = random(INTERVALMIN, INTERVALMAX);
             var length = random(LENGTHMIN, LENGTHMAX);
             var randomNumber = random(1, MAX);
-
             var hollow = random(1, length);
-
             String[] createProgression = generateProgression(interval, length, randomNumber);
             String answer = createProgression[hollow - 1];
             createProgression[hollow - 1] = "..";
-
             questionAnswer[0] = String.join(" ", createProgression);
             questionAnswer[1] = answer;
 
